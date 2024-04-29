@@ -1,16 +1,25 @@
 import { Injectable } from '@nestjs/common';
 import { Cat } from './interfaces/cat.interface';
+import { randomUUID } from 'crypto';
+import * as catsList from './../mocks/cats-list.json';
 
 @Injectable()
 export class CatsService {
-  private readonly cats: Cat[] = [];
+  private readonly cats: Cat[] = catsList;
 
   create(cat: Cat) {
-    this.cats.push(cat);
+    const newCat = {
+      id: randomUUID(),
+      ...cat,
+    };
+    this.cats.push(newCat);
+    return newCat;
   }
 
   findById(id: string): Cat {
-    return this.cats.find((cat) => cat.id === id);
+    const exitsCat = this.cats.find((cat) => cat.id === id);
+    if (!exitsCat) return null;
+    return exitsCat;
   }
 
   findCatsByLimit(limit: number): Cat[] {
