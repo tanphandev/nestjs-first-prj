@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Cat } from './interfaces/cat.interface';
 import { randomUUID } from 'crypto';
-import * as catsList from './../mocks/cats-list.json';
+import * as catsList from './../../mocks/cats-list.json';
 
 @Injectable()
 export class CatsService {

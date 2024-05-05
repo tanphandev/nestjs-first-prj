@@ -1,0 +1,14 @@
+[
+  {
+    "id": "d704a740-968a-491f-a8f3-7ef3a2008510",
+    "userName": "tanphandev",
+    "password": "$2b$10$qSOboZUMNE7j1XnNM.2cuOz/kLbID2AokXWP8b1/0wtG8JTjIzY1G",
+    "role": "admin"
+  },
+  {
+    "id": "d704a740-968a-491f-a8f3-7ef3a2008511",
+    "userName": "klinhle",
+    "password": "$2b$10$qSOboZUMNE7j1XnNM.2cuOz/kLbID2AokXWP8b1/0wtG8JTjIzY1G",
+    "role": "user"
+  }
+]
