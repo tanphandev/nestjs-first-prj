@@ -9,6 +9,9 @@ async function bootstrap() {
   //  exception filters
   app.useGlobalFilters(new HttpExceptionFilter());
 
+  //cors
+  app.enableCors();
+
   // listen on port 4000
   await app.listen(4000);
 }
